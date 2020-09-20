@@ -6,5 +6,5 @@ New email was sent by {{ $name }}
 Message:
 {{ $message }}
 <br>
-Email:{{$email}}
+Email:{{$sender_email}}
 @endcomponent

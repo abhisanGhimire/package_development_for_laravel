@@ -65,7 +65,7 @@
                                 <label class="label is-pulled-left mt-1">Email</label>
                                 <input class="input " name="sender_email" type="email" placeholder="Enter Your E-mail">
                                 {{-- Message --}}
-                                <label class="label is-pulled-left mt-1">Query</label>
+                                <label class="label is-pulled-left mt-1">Message</label>
                                 <textarea class="textarea " name="message"
                                     placeholder="Any queries you have"></textarea>
                                 <button class="button is-link mt-3" type="submit">Send</button>
