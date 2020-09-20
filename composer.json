@@ -1,0 +1,17 @@
+{
+    "name": "invictus/contact",
+    "description": "Sends email to admin and save in database, it uses bulma CSS for front-end.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [{
+        "name": "abhisanGhimire",
+        "email": "abhisanghimire@dr-ait.org"
+    }],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "abhisanGhimire\\Contact\\": "src/"
+        }
+    }
+}
