@@ -13,5 +13,12 @@
         "psr-4": {
             "abhisanGhimire\\Contact\\": "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "abhisanGhimire\\Contact\\ContactServiceProvider"
+            ]
+        }
     }
 }
