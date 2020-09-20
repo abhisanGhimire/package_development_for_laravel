@@ -11,6 +11,7 @@ class ContactMailable extends Mailable
     use Queueable, SerializesModels;
     public $message;
     public $name;
+    public $email;
     /**
      * Create a new message instance.
      *
@@ -20,7 +21,7 @@ class ContactMailable extends Mailable
     {
         $this->message = $message;
         $this->name = $name;
-
+        $this->email = $email;
     }
 
     /**
@@ -30,6 +31,6 @@ class ContactMailable extends Mailable
      */
     public function build()
     {
-        return $this->markdown('contact::contact.email')->with(['message' => $this->message, 'name' => $this->name]);
+        return $this->markdown('contact::contact.email')->with(['message' => $this->message, 'name' => $this->name, 'email' => $this->email]);
     }
 }
