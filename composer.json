@@ -1,5 +1,5 @@
 {
-    "name": "abhisan/contact",
+    "name": "abhisan/contact_with_bulma",
     "description": "Sends email to admin and save in database, it uses bulma CSS for front-end.",
     "type": "library",
     "license": "MIT",
