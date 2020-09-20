@@ -12,6 +12,11 @@
     </head>
 
     <body>
+        @if(session('message'))
+        <div class="alert alert-success alert-block">
+            <strong>{{ $message }}</strong>
+        </div>
+        @endif
         <section class="section has-text-centered is-family-monospace">
             <div class="container is-fluid">
                 <div class="tile is-ancestor">

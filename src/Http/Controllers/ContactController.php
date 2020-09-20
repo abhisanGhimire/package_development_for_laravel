@@ -19,6 +19,6 @@ class ContactController extends Controller
 
         Mail::to(config('contact.send_email_to'))->send(new ContactMailable($request->message, $request->name, $request->sender_email));
         Contact::create($request->all());
-        return redirect()->route('contact');
+        return redirect()->route('contact')->with('message', 'Message Sent Sucessfully');
     }
 }
