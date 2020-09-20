@@ -1,5 +1,5 @@
 @component('mail::message')
-#{{ config('app.name') }}
+<strong>{{ config('app.name') }}</strong>
 
 New email was sent by {{ $name }}
 

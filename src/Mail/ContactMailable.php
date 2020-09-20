@@ -11,17 +11,17 @@ class ContactMailable extends Mailable
     use Queueable, SerializesModels;
     public $message;
     public $name;
-    public $email;
+    public $sender_email;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($message, $name, $email)
+    public function __construct($message, $name, $sender_email)
     {
         $this->message = $message;
         $this->name = $name;
-        $this->email = $email;
+        $this->sender_email = $sender_email;
     }
 
     /**
@@ -31,6 +31,6 @@ class ContactMailable extends Mailable
      */
     public function build()
     {
-        return $this->markdown('contact::contact.email')->with(['message' => $this->message, 'name' => $this->name, 'email' => $this->email]);
+        return $this->markdown('contact::contact.email')->with(['message' => $this->message, 'name' => $this->name, 'sender_email' => $this->sender_email]);
     }
 }

@@ -32,7 +32,7 @@ MAIL_ENCRYPTION=TLS
 In .env file :
 
 ```
-SEND_MAIL_TO=your_email_address
+SEND_EMAIL_TO=your_email_address
 FB_ADDRESS=your_fb_profile_link
 INSTA_ADDRESS=your_insta_profile_link
 TWITTER_ADDRESS=your_twitter_link
