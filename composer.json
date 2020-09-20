@@ -1,5 +1,5 @@
 {
-    "name": "invictus/contact",
+    "name": "abhisan/contact",
     "description": "Sends email to admin and save in database, it uses bulma CSS for front-end.",
     "type": "library",
     "license": "MIT",
