@@ -39,6 +39,10 @@ TWITTER_ADDRESS=your_twitter_link
 ADDRESS= your_address
 ```
 
+## To publish config and views
+
+`php artisan vendor:publish --provider="abhisanGhimire\Contact\ContactServiceProvider"`
+
 ## Extra Info
 
 You can pass raw HTML in your ADDRESS if you want to display address in any specific order
