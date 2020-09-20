@@ -17,7 +17,7 @@ class ContactMailable extends Mailable
      *
      * @return void
      */
-    public function __construct($message, $name)
+    public function __construct($message, $name, $email)
     {
         $this->message = $message;
         $this->name = $name;
