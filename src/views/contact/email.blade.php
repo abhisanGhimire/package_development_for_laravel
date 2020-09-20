@@ -1,14 +1,10 @@
 @component('mail::message')
-# Introduction
+#{{ config('app.name') }}
 
-New query from {{ $name }}
+New email was sent by {{ $name }}
 
+Message:
 {{ $message }}
-
-@component('mail::button', ['url' => ''])
-Button Text
-@endcomponent
-
-Thanks,<br>
-{{ config('app.name') }}
+<br>
+Email:{{$email}}
 @endcomponent
