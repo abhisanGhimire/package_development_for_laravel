@@ -12,11 +12,6 @@
     </head>
 
     <body>
-        @if(session('message'))
-        <div class="alert alert-success alert-block">
-            <strong>{{ $message }}</strong>
-        </div>
-        @endif
         <section class="section has-text-centered is-family-monospace">
             <div class="container is-fluid">
                 <div class="tile is-ancestor">
@@ -60,14 +55,26 @@
                                 @csrf
                                 {{-- Name --}}
                                 <label class="label is-pulled-left mt-1">Name</label>
-                                <input class="input" name="name" type="text" placeholder="Enter Your Name">
+                                <input class="input @error('name') is-danger @enderror" name="name" type="text"
+                                    value="{{ old('name') }}" placeholder="Enter Your Name">
+                                @error('name')
+                                <p class="help is-danger">{{ $message }}</p>
+                                @enderror
                                 {{-- Email --}}
                                 <label class="label is-pulled-left mt-1">Email</label>
-                                <input class="input " name="sender_email" type="email" placeholder="Enter Your E-mail">
+                                <input class="input @error('sender_email') is-danger @enderror"
+                                    value="{{ old('sender_email') }}" name="sender_email" type="text"
+                                    placeholder="Enter Your E-mail">
+                                @error('sender_email')
+                                <p class="help is-danger">{{ $message }}</p>
+                                @enderror
                                 {{-- Message --}}
                                 <label class="label is-pulled-left mt-1">Message</label>
-                                <textarea class="textarea " name="message"
-                                    placeholder="Any queries you have"></textarea>
+                                <textarea class="textarea @error('message') is-danger @enderror" name="message"
+                                    placeholder="Any queries you have">{{ old('message') }}</textarea>
+                                @error('message')
+                                <p class="help is-danger">{{ $message }}</p>
+                                @enderror
                                 <button class="button is-link mt-3" type="submit">Send</button>
                             </form>
                         </div>
